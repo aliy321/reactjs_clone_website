@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project is to demonstrate how to use create simple website using ReactJS.
+This project is to demonstrate how to use create simple website by cloning [this](https://zeo.org/) website using ReactJS.
 
 Things I've learned:
 - react-bootstrap
