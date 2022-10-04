@@ -1,0 +1,13 @@
+.partners{
+    &__slider{
+        img{
+            filter: grayscale(100%);
+            transition: all 0.5s ease;
+
+            &:hover{
+                filter: grayscale(0%);
+                transition: all 0.5s ease;
+            }
+        }
+    }
+}

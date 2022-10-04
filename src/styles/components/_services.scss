@@ -1,0 +1,21 @@
+.services{
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1em;
+    }
+
+    &__image{
+        img{
+            width: clamp(300px, 100%, 720px);
+            background-size: cover;
+        }
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2.5em 0;
+    }
+}

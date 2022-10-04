@@ -1,0 +1,24 @@
+// Node Modules
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import "../node_modules/rfs/scss";
+
+// Settings
+@import 'styles/variables.scss';
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+// Components
+@import 'styles/reset.scss';
+@import 'styles/components/hero.scss';
+@import 'styles/components/services.scss';
+@import 'styles/components/news.scss';
+@import 'styles/components/partners.scss';
+@import 'styles/components/resources.scss';
+
+// Overrides
+@import 'styles/overrides.scss';
+
+body{
+    font-family: 'Quicksand', sans-serif;
+}

@@ -1,0 +1,43 @@
+.hero {
+    >.row{
+        gap: 2em;
+    }
+    
+    &__image {
+        &.small {
+            img {
+                width: clamp(300px, 100%, 720px);
+                background-size: cover;
+            }
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // padding: 2.5em 0;
+
+        @media (max-width: 768px) {
+            &.big {
+                display: none;
+            }
+
+            &.small {
+                display: block;
+            }
+        }
+
+        @media (min-width: 769px) {
+            &.big {
+                display: block;
+                width: 99vw;
+                position: relative;
+                left: 50%;
+                margin-left: -50vw;
+            }
+
+            &.small {
+                display: none;
+            }
+        }
+    }
+}
