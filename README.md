@@ -3,9 +3,14 @@
 This project is to demonstrate I create simple website by cloning [this](https://zeo.org/) website using ReactJS.
 
 Things I've learned:
+
+V1
 - react-bootstrap
 - react-icons
 - react-slick
+
+V2 
+- added sanity cms 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
