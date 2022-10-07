@@ -6,7 +6,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Images from 'react-bootstrap/Image';
 
-function Partners(props) {
+function Partners({ data, ...props }) {
+    if (!data) return <div></div>;
+
     const settings = {
         dots: true,
         infinite: false,
@@ -57,52 +59,33 @@ function Partners(props) {
             }
         ]
     };
-    
+
     return (
         <Container fluid={"sm"}>
             <section id="partners" className="partners__slider">
                 <Row>
-                    <Col lg={12} md={12} sm={12}>
-                        <div className="partners__content content-center">
-                            <h5 className="partners__title">{props.title}</h5>
-                            <h1 className="partners__heading">
-                                {props.heading}
-                            </h1>
-                            <hr className="line" />
-                            <p className="partners__text">{props.text}</p>
-                        </div>
-                    </Col>
+                    {data && data.map((recoginition, index) => (
+                        <Col lg={12} md={12} sm={12} key={index}>
+                            <div className="recoginition__content content-center">
+                                <h1 className="recoginition__title">{recoginition.title}</h1>
+                                <hr className="line" />
+                            </div>
+                        </Col>
+                    ))}
+
                 </Row>
                 <Row>
                     <Container>
                         <Slider {...settings} className="partners">
-                            <div className="slick-item">
-                                <Images src="images/partners/1643719112-amazon.webp" fluid />
-                            </div>
-                            <div className="slick-item">
-                                <Images src="images/partners/1641481529-logolar_bmw-c.webp" fluid />
-                            </div>
-                            <div className="slick-item">
-                                <Images src="images/partners/1641765694-media-markt.webp" fluid />
-                            </div>
-                            <div className="slick-item">
-                                <Images src="images/partners/1641842047-bayer.webp" fluid />
-                            </div>
-                            <div className="slick-item">
-                                <Images src="images/partners/1642685532-bat-1.webp" fluid />
-                            </div>
-                            <div className="slick-item">
-                                <Images src="images/partners/1643719112-amazon.webp" fluid />
-                            </div>
-                            <div className="slick-item">
-                                <Images src="images/partners/1643719112-amazon.webp" fluid />
-                            </div>
-                            <div className="slick-item">
-                                <Images src="images/partners/1643719112-amazon.webp" fluid />
-                            </div>
-                            <div className="slick-item">
-                                <Images src="images/partners/1643719112-amazon.webp" fluid />
-                            </div>
+                            {
+                                data && data.map((partners) => (
+                                    partners.content && partners.content.map((content, index) => (
+                                        <div className="slick-item" key={index}>
+                                            <Images src={partners.content[index].image.asset.url} fluid alt={partners.content[index].alt} />
+                                        </div>
+                                    ))
+                                ))
+                            }
                         </Slider>
                     </Container>
                 </Row>
